@@ -27,6 +27,26 @@ ExportedObj/
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
+*.meta
+
+#Making sure all meta files are ignored
+GameLib/*.meta
+GameLib/Entity/*.meta
+GameLib/Entity/Animation/*.meta
+GameLib/Entity/Behaviour/*.meta
+GameLib/Entity/Behaviour/State/*.meta
+GameLib/Entity/NonPlayerCharacter/*.meta
+GameLib/Entity/NonPlayerCharacter/StateMachine/*.meta
+GameLib/Entity/NonPlayerCharacter/StateMachine/Logic/*.meta
+GameLib/Level/*.meta
+GameLib/System/*.meta
+GameLib/System/Audio/*.meta
+GameLib/System/Camera/*.meta
+GameLib/System/Controller/*.meta
+GameLib/System/Debug/*.meta
+GameLib/System/Effect/*.meta
+GameLib/System/Gravity2D/*.meta
+GameLib/System/GUI/*.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
