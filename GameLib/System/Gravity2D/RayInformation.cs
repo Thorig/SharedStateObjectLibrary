@@ -55,7 +55,6 @@ namespace GameLib.System.Gravity2D
             correctionOnSlopeLeft = posRayLeftBelow;
             correctionOnSlopeRight = posRayRightBelow;
 
-
             if (rightRayOnSlope && hitRightBelow.collider.gameObject.name.CompareTo("Hills1x1") == 0)
             {
                 correctionOnSlopeRight = SlopeCorrectionList[Actor.RIGHT_CORRECTION_SLOPE_1x1];
@@ -90,7 +89,8 @@ namespace GameLib.System.Gravity2D
             
             if (hitMiddleBelow.collider.tag.CompareTo("Slope") != 0 ||  
                 (doIgnoreSlope && distanceBelow >= (minimalSpaceBetweenTileBelow * m)) || 
-                !doIgnoreSlope)
+                !doIgnoreSlope
+                )
             {
                 if (leftDistanceBelow < distanceBelow)
                 {
