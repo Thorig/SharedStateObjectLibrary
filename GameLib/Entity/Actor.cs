@@ -181,8 +181,8 @@ namespace GameLib.Entity
 #endif
         }
 
-        public virtual void FixedUpdate()
-        {
+        public virtual void LateUpdate()
+        {            
             gravity.update(gravityClient);
 #if USE_3D_RAYS
             Collider collider = rayHitboxes3D.HitMiddleBelow.collider;

@@ -1,12 +1,16 @@
 ﻿using GameLib.Entity.Animation;
+using GameLib.Level;
 using GameLib.System.Controller;
 using GameLib.System.Gravity2D;
 using System;
+using UnityEngine;
 
 namespace GameLib.Entity.Behaviour.State
 {
     public class Idle : AbstractState
     {
+        protected int layermask;
+
         public override void animationMessage(int messageId, IEntity entity)
         {
             throw new NotImplementedException();
@@ -16,6 +20,8 @@ namespace GameLib.Entity.Behaviour.State
         {
             entity.setMoving(false);
             switchAnimation(AnimationAttributes.ANIMATION_IDLE, entity);
+            LayersLookup layersLookup = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LayersLookup>();
+            layermask = (1 << layersLookup.giveLayerNumber("Tile"));
         }
 
         public override void update(IEntity entity)

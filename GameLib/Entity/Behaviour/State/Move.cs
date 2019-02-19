@@ -22,7 +22,7 @@ namespace GameLib.Entity.Behaviour.State
 
         public override void init(IEntity entity)
         {
-            ignoreslopes = true;
+            ignoreslopes = true;            
             LayersLookup layersLookup = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LayersLookup>();
             layermask = (1 << layersLookup.giveLayerNumber("Tile"));
             entity.setMoving(true);
@@ -116,11 +116,12 @@ namespace GameLib.Entity.Behaviour.State
                 }
                 rayInformation.checkRaysFront(gravityClient, 0.0f, angles.z + 0.0f, layermask, false);
             }
-            bool isWalking = (!entity.getGravity().isFalling() && !entity.getGravity().Jumping);
-
+            bool isWalking = !entity.getGravity().isFalling() && !entity.getGravity().Jumping;
             float frontDistance = (rayHitboxes.HitMiddleFront.collider != null && rayHitboxes.HitMiddleFront.collider.CompareTag("Slope")) ? rayHitboxes.HitTopFront.distance : rayHitboxes.HitMiddleFront.distance;
+
             frontDistance = (isWalking && (rayHitboxes.HitMiddleBelow.collider.CompareTag("Slope") || rayHitboxes.HitBelowFront.distance < 0)) ? frontDistance : rayHitboxes.DistanceFront;
-            if( frontDistance > rayInformation.MinimalSpaceBetweenTileFront)
+
+            if ( frontDistance > rayInformation.MinimalSpaceBetweenTileFront)
             {
                 if (keysPressed.right && !keysPressed.left)
                 {
