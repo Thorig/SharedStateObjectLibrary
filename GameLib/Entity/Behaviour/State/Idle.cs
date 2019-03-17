@@ -9,11 +9,9 @@ namespace GameLib.Entity.Behaviour.State
 {
     public class Idle : AbstractState
     {
-        protected int layermask;
-
         public override void animationMessage(int messageId, IEntity entity)
         {
-            throw new NotImplementedException();
+      //      throw new NotImplementedException();
         }
 
         public override void init(IEntity entity)

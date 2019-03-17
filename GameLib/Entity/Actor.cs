@@ -10,13 +10,6 @@ namespace GameLib.Entity
 {
     public class Actor : MonoBehaviour
     {
-        public static int LEFT_CORRECTION_SLOPE_1x1 = 0; //-0.2 -0.525
-        public static int RIGHT_CORRECTION_SLOPE_1x1 = 1; //-0.2 0.66
-        public static int LEFT_CORRECTION_SLOPE_1x2 = 2; //-0.2 -0.525
-        public static int RIGHT_CORRECTION_SLOPE_1x2 = 3; //-0.2 0.66
-        public static int LEFT_CORRECTION_SLOPE_1x3 = 4; //-0.2 -0.525
-        public static int RIGHT_CORRECTION_SLOPE_1x3 = 5; //-0.2 0.66
-
         [SerializeField]
         protected Gravity gravity;
 
