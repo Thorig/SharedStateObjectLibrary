@@ -29,7 +29,7 @@ public class FollowCam3D : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         posY = player.transform.position.y + posYManipulator;
         posX = player.transform.position.x + posXManipulator;

@@ -6,8 +6,6 @@ namespace GameLib.Entity.Behaviour.State
 {
     public class Attack : AbstractState
     {
-        protected int layermask;
-
         public override void animationMessage(int messageId, IEntity entity)
         {
             entity.getTransform().gameObject.GetComponent<Player>().AnimationAttributes.setCooldown();

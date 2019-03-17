@@ -29,7 +29,7 @@ namespace GameLib.System.Camera
         }
 
         // Update is called once per frame
-        public virtual void FixedUpdate()
+        public virtual void LateUpdate()
         {
             posY = player.transform.position.y + posYManipulator;
             posX = player.transform.position.x + posXManipulator;

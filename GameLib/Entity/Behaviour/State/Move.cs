@@ -12,7 +12,6 @@ namespace GameLib.Entity.Behaviour.State
 {
     public class Move : AbstractState
     {
-        protected int layermask;
         protected bool ignoreslopes;
 
         public override void animationMessage(int messageId, IEntity entity)

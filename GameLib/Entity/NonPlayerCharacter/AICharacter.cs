@@ -43,13 +43,13 @@ namespace GameLib.Entity.NonPlayerCharacter
         {
             if (frameCounter % activeFrame == 0)
             {
-                fixedUpdateBody();
+                lateUpdateBody();
             }
 
             base.LateUpdate();
         }
 
-        protected virtual void fixedUpdateBody()
+        protected virtual void lateUpdateBody()
         { 
             keysPressed.reset();
             aiCharacterController.updateBrain(this);
